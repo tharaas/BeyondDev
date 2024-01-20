@@ -1,0 +1,12 @@
+# Write a program to reverse a string in place.
+
+
+def reverse(str):
+    if len(str) == 0:  # if it is the last character return it
+        return str
+    return reverse(str[1:]) + str[0]   # recursive to the next element
+
+
+string = "Reverse the string"
+print("The original string is : ", string)
+print("The reversed string is: ", reverse(string))

@@ -1,0 +1,18 @@
+# Write a program to find the maximum and minimum elements in an array.
+
+
+def maxmin(array):
+    max = array[0]
+    min = array[0]
+    for index in array:
+        if index > max:     # if the number is bigger then maximum number until now
+            max = index     # then save the maximum
+        if index < min:     # if the number is smallest then minimum number until now
+            min = index     # then save the minimum
+    return max, min
+
+
+array0 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+maximum, minimum = maxmin(array0)
+print("The maximum number in the array is: ", maximum)
+print("The minimum number in the array is: ", minimum)
